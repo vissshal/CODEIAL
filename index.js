@@ -2,16 +2,15 @@ const express = require("express");
 const app = express();
 const port = 8000;
 const path = require("path");
+const routes = require("./routes");
+const controller = require("./controllers/home_controller");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+app.use("/", routes);
 app.use(express.urlencoded());
-app.use(express.static("assests"));
-
-app.get("/", function (req, res) {
-  return res.send("<h2>CODEIAL </h2>");
-});
+app.use(express.static("assets"));
 
 app.listen(port, function (err) {
   if (err) {
