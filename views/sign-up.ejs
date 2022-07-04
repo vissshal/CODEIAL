@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <body style="font-family: calibri">
+      <h2>Sign-up Page</h2>
+      <form action="/user/create" method="post">
+        Name :
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Name"
+          style="margin-left: 23px; padding: 4px"
+          ;
+        />
+        <br />
+        Email :
+        <input
+          type="text"
+          name="email"
+          required
+          placeholder="Email"
+          style="margin-left: 26px; padding: 4px"
+          ;
+        />
+        <br />
+        Password :
+        <input
+          type="text"
+          name="password"
+          required
+          placeholder="Password"
+          style="padding: 4px"
+        /><br />
+        <button type="submit" style="margin-left: 74px; padding: 5px">
+          Sign-up
+        </button>
+      </form>
+    </body>
+  </head>
+</html>

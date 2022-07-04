@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <style>
+      #sign-out {
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      #sign-out button {
+        padding: 10px;
+      }
+      button:hover {
+        background-color: #2185d0;
+        color: white;
+        border-width: 1px;
+      }
+    </style>
+  </head>
+  <body style="font-family: calibri">
+    <h1>About</h1>
+    <h3>Name : <%= user.name %></h3>
+    <h4>Email : <%= user.email %></h4>
+    <div id="sign-out">
+      <a href="/user/signout/">
+        <button>Sign Out</button>
+      </a>
+    </div>
+  </body>
+</html>
