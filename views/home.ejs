@@ -1,8 +1,33 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css" />
     <body>
-      Welcome to the Home Page of CODEIAL
+      <h2>Welcome to the Home Page of CODEIAL</h2>
+      <div>
+        <!-- Since, "locals.user" is created only when "req.isAuthenticated()" returns true thus, we can use 
+          "locals.user" in case we don't have access to "req.isAuthenticated()" or callback function with arguement as req -->
+        <% if (locals.user){ %>
+        <a href="/user/profile">
+          <!--  -->
+          <button class="profile-signup">Profile</button>
+        </a>
+        <h3>Posts</h3>
+        <form action="/user/addPost" id="new-post" method="post">
+          <textarea name="content" cols="50" rows="5"> </textarea>
+          <input type="button" value="Post" />
+        </form>
+
+        <% } else { %>
+        <a href="/user/signin">
+          <button id="signin">Sign In</button>
+        </a>
+
+        <a href="/user/signup">
+          <button class="profile-signup">Sign Up</button>
+        </a>
+        <% } %>
+      </div>
     </body>
   </head>
 </html>

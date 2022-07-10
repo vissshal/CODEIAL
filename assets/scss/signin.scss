@@ -1,0 +1,29 @@
+body {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+
+  button {
+    cursor: pointer;
+  }
+  form {
+    button {
+      margin-left: 74px;
+      padding: 5px;
+    }
+  }
+
+  #signup {
+    position: absolute;
+    right: 0;
+    top: 58px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    width: 150px;
+    &:hover {
+      background-color: #2185d0;
+      color: white;
+      border: 1px solid white;
+      border-radius: 2px;
+      width: 170px;
+    }
+  }
+}

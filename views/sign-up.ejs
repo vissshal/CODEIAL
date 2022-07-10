@@ -1,7 +1,9 @@
 <html>
   <head>
     <title><%= title %></title>
-    <body style="font-family: calibri">
+    <link rel="stylesheet" href="/css/signup.css" />
+
+    <body>
       <h2>Sign-up Page</h2>
       <form action="/user/create" method="post">
         Name :
@@ -10,8 +12,7 @@
           name="name"
           required
           placeholder="Name"
-          style="margin-left: 23px; padding: 4px"
-          ;
+          class="name-email"
         />
         <br />
         Email :
@@ -20,8 +21,7 @@
           name="email"
           required
           placeholder="Email"
-          style="margin-left: 26px; padding: 4px"
-          ;
+          class="name-email"
         />
         <br />
         Password :
@@ -32,10 +32,12 @@
           placeholder="Password"
           style="padding: 4px"
         /><br />
-        <button type="submit" style="margin-left: 74px; padding: 5px">
-          Sign-up
-        </button>
+        <button type="submit">Sign-up</button>
       </form>
+
+      <a href="/user/signin">
+        <button id="signin">Sign In</button>
+      </a>
     </body>
   </head>
 </html>

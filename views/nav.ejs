@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+    <body>
+      <div class="nav-main">
+        <div id="logo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKNKP8ZQng8wRVWpCZyiOm03ERxuSNqZ_0ZQ&usqp=CAU"
+            alt="logo"
+          />
+        </div>
+        <div id="logo-text">CODEIAL</div>
+        <% if (locals.user){ %>
+        <div id="showUser">Welcome <%= locals.user.name %></div>
+        <% } %>
+      </div>
+    </body>
+  </head>
+</html>
