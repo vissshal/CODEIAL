@@ -20,5 +20,14 @@
   #showUser {
     position: absolute;
     right: 5;
+    padding-left: 4px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    img {
+      height: 15px;
+      width: 15px;
+    }
   }
 }

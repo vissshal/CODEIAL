@@ -21,4 +21,15 @@
 .nav-main #showUser {
   position: absolute;
   right: 5;
+  padding-left: 4px;
+}
+
+.nav-main #showUser a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-main #showUser img {
+  height: 15px;
+  width: 15px;
 }

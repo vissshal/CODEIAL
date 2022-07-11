@@ -7,19 +7,29 @@
       href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
       rel="stylesheet"
     />
-    <body>
-      <div class="nav-main">
-        <div id="logo">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKNKP8ZQng8wRVWpCZyiOm03ERxuSNqZ_0ZQ&usqp=CAU"
-            alt="logo"
-          />
-        </div>
-        <div id="logo-text">CODEIAL</div>
-        <% if (locals.user){ %>
-        <div id="showUser">Welcome <%= locals.user.name %></div>
-        <% } %>
-      </div>
-    </body>
   </head>
+  <body>
+    <div class="nav-main">
+      <div id="logo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKNKP8ZQng8wRVWpCZyiOm03ERxuSNqZ_0ZQ&usqp=CAU"
+          alt="logo"
+        />
+      </div>
+
+      <div id="logo-text">CODEIAL</div>
+      <% if (locals.user){ %>
+
+      <div id="showUser">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
+          alt="user-img"
+        />
+        <%= locals.user.name %>
+        <a href="/user/signout/">SignOut</a>
+      </div>
+
+      <% } %>
+    </div>
+  </body>
 </html>

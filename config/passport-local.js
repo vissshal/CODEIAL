@@ -72,7 +72,7 @@ passport.setAuthenticatedUser = function (req, res, next) {
   if (req.isAuthenticated()) {
     // req.user contains the current signed in user from the session cookie and we are just sending this to the locals for the views
     res.locals.user = req.user;
-    // now 'user' is a global variable till the session is live
+    // now 'user' is a global variable till the session is live but it can only be used with locals as prefix i.e. locals.user.xxxx
   }
   next();
 };

@@ -1,19 +1,29 @@
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Arima Madurai", cursive;
 }
 
-button {
+body button {
   cursor: pointer;
   box-sizing: border-box;
   width: 150px;
 }
 
-button:hover {
+body button:hover {
   background-color: #2185d0;
   color: white;
   border: 1px solid white;
   border-radius: 3px;
   width: 170px;
+}
+
+body #posts li {
+  padding: 12px 0;
+}
+
+body #posts #user-name {
+  font-family: calibri;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .profile-signup {

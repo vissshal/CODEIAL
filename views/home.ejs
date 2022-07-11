@@ -1,7 +1,14 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/home.css" />
+
     <body>
       <h2>Welcome to the Home Page of CODEIAL</h2>
       <div>
@@ -13,11 +20,12 @@
           <button class="profile-signup">Profile</button>
         </a>
         <h3>Posts</h3>
-        <form action="/user/addPost" id="new-post" method="post">
+        <form action="/post/create" id="new-post" method="post">
           <textarea name="content" cols="50" rows="5"> </textarea>
-          <input type="button" value="Post" />
+          <button type="submit" id="post-btn">Post</button>
         </form>
 
+        <!--  -->
         <% } else { %>
         <a href="/user/signin">
           <button id="signin">Sign In</button>
@@ -27,6 +35,22 @@
           <button class="profile-signup">Sign Up</button>
         </a>
         <% } %>
+      </div>
+      <div id="Posts">
+        <h3><%= locals.user.name %>'s Posts</h3>
+        <div id="older-posts">
+          <ul>
+            <% post.map(function(posts){ %>
+
+            <li>
+              <%= posts.content %> -
+              <!-- <span id="user-name"> <%= locals.user.name %> </span> -->
+              <span id="user-name"> <%= posts.user.name %> </span>
+            </li>
+
+            <%} )%>
+          </ul>
+        </div>
       </div>
     </body>
   </head>

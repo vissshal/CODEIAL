@@ -4,7 +4,6 @@ const passport = require("passport");
 const user = require("../controllers/user_ctrl");
 
 router.get("/profile", passport.checkAuthentication, user.profile);
-
 router.get("/signin", user.signin);
 router.get("/signup", user.signup);
 router.post("/create", user.create);
