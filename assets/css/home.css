@@ -1,7 +1,3 @@
-body {
-  font-family: "Arima Madurai", cursive;
-}
-
 body button {
   cursor: pointer;
   box-sizing: border-box;
@@ -16,11 +12,25 @@ body button:hover {
   width: 170px;
 }
 
-body #posts li {
-  padding: 12px 0;
+body #older-posts {
+  margin-top: 4px;
 }
 
-body #posts #user-name {
+body #older-posts .user {
+  padding: 8px 4px;
+  margin-top: 20px;
+}
+
+body #older-posts .user .user-name {
+  font-family: calibri;
+  font-size: 15px;
+}
+
+body #older-posts .user .user-name b {
+  font-size: 20px;
+}
+
+body #older-posts .user .user-post {
   font-family: calibri;
   font-weight: 400;
   font-size: 14px;

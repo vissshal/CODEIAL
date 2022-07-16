@@ -25,7 +25,21 @@
           <button type="submit" id="post-btn">Post</button>
         </form>
 
-        <!--  -->
+        <!-- <h3><%= locals.user.name %>'s Posts</h3> -->
+        <div id="older-posts">
+          <% post.map(function(posts){ %>
+          <div class="user">
+            <div class="user-name">
+              <b><%= posts.user.name %></b> posted on
+              <!--  -->
+              <% const date = posts.createdAt.toDateString() %> <%= date %>
+            </div>
+            <!-- <span id="user-name"> <%= locals.user.name %> </span> -->
+            <div class="user-post"><%= posts.content %></div>
+          </div>
+          <%} ) %>
+        </div>
+
         <% } else { %>
         <a href="/user/signin">
           <button id="signin">Sign In</button>
@@ -35,22 +49,6 @@
           <button class="profile-signup">Sign Up</button>
         </a>
         <% } %>
-      </div>
-      <div id="Posts">
-        <h3><%= locals.user.name %>'s Posts</h3>
-        <div id="older-posts">
-          <ul>
-            <% post.map(function(posts){ %>
-
-            <li>
-              <%= posts.content %> -
-              <!-- <span id="user-name"> <%= locals.user.name %> </span> -->
-              <span id="user-name"> <%= posts.user.name %> </span>
-            </li>
-
-            <%} )%>
-          </ul>
-        </div>
       </div>
     </body>
   </head>

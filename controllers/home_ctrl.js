@@ -3,7 +3,7 @@ const Post = require("../models/posts");
 module.exports.home = function (req, res) {
   //console.log(req.cookies);
 
-  Post.find({ user: req.user._id })
+  Post.find({}) // yahan arguement me "user: req.user._id" nahi denge to wo sara posts find krke show krega and using population uske respective owner ka details v fetch krega together
     .populate("user")
     .exec(function (err, post) {
       if (err) {

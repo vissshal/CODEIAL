@@ -1,6 +1,4 @@
 body {
-  font-family: "Arima Madurai", cursive;
-
   button {
     cursor: pointer;
     box-sizing: border-box;
@@ -13,14 +11,25 @@ body {
       width: 170px;
     }
   }
-  #posts {
-    li {
-      padding: 12px 0;
-    }
-    #user-name {
-      font-family: calibri;
-      font-weight: 400;
-      font-size: 14px;
+
+  #older-posts {
+    margin-top: 4px;
+    .user {
+      padding: 8px 4px;
+      margin-top: 20px;
+      .user-name {
+        font-family: calibri;
+
+        font-size: 15px;
+        b {
+          font-size: 20px;
+        }
+      }
+      .user-post {
+        font-family: calibri;
+        font-weight: 400;
+        font-size: 14px;
+      }
     }
   }
 }
