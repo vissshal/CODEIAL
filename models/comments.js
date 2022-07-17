@@ -13,6 +13,7 @@ const commentSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Post",
     },
+    // In post, we'll pass the Post ID to each comment
   },
   {
     timestamps: true,
