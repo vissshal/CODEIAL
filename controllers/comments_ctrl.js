@@ -9,9 +9,9 @@ module.exports.create = function (req, res) {
         {
           content: req.body.content,
           post: req.body.post,
-          // since we are passing the comment hidden within the form itself with name = 'post'
+          // since we are passing the comment which is hidden within the form itself with name = 'post'
           user: req.user._id,
-          // req.user contains all the information related to the logged In user
+          // req.user contains all the information related to the logged In user and initially we are only passing the USER ID to it
         },
         function (err, comment) {
           if (err) {
@@ -25,5 +25,15 @@ module.exports.create = function (req, res) {
         }
       );
     }
+  });
+};
+
+module.exports.delete = function (req, res) {
+  Comments.findByIdAndDelete(req.params.id, function (err, post) {
+    if (err) {
+      console.log(err);
+    }
+
+    return redirect("/");
   });
 };

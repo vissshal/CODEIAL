@@ -47,8 +47,15 @@
                 <%= posts.user.name %>
                 <!--  -->
               </b>
-              posted on <% const date = posts.createdAt.toDateString() %> <%=
-              date %>
+              posted on <%= posts.createdAt.toDateString() %>
+
+              <!-- Delete post button -->
+
+              <% if (posts.user.email == locals.user.email){ %>
+              <a href="/post/delete/<%= posts._id %>"> Delete </a>
+              <% } %>
+
+              <!--  -->
             </div>
             <div class="user-post"><%= posts.content %></div>
 
@@ -65,10 +72,22 @@
                 <button type="submit" id="post-btn">Comment</button>
               </form>
             </div>
+
+            <!-- Posting the comments made on the post -->
+
             <% posts.comments.map(function(comment){ %>
             <div class="comments">
               <div class="comments-user">
-                <%= comment.user.name %> commented
+                <%= comment.user.name %> commented on <%=
+                comment.createdAt.toDateString() %>
+
+                <!-- Delete post button -->
+
+                <% if (comment.user.email == locals.user.email){ %>
+                <a href="/comments/delete/<%= comment._id %>"> Delete </a>
+                <% } %>
+
+                <!--  -->
               </div>
               <div class="comments-comment"><%= comment.content %></div>
             </div>

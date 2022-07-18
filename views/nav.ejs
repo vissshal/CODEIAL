@@ -17,15 +17,11 @@
         />
       </div>
 
-      <div id="logo-text">CODEIAL</div>
+      <div id="logo-text"><a href="/">CODEIAL</a></div>
       <% if (locals.user){ %>
 
       <div id="showUser">
-        <img
-          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
-          alt="user-img"
-        />
-        <%= locals.user.name %>
+        <a href="/user/profile"><%= locals.user.name %></a>
         <a href="/user/signout/">SignOut</a>
       </div>
 

@@ -1,4 +1,7 @@
 body {
+  a {
+    text-decoration: none;
+  }
   h2 {
     font-family: "Allerta", sans-serif;
   }
@@ -61,9 +64,19 @@ body {
       .user-post {
         font-family: calibri;
         font-weight: 400;
-        font-size: 18px;
-        margin-top: 8px;
-        margin-left: 30px;
+        font-size: 16px;
+        margin: 8px 30px 10px;
+      }
+      .delete-btn {
+        margin: 15px 40px;
+        padding: 5px 10px;
+      }
+      a {
+        font-weight: 550;
+        margin-left: 15px;
+        &:hover {
+          color: red;
+        }
       }
     }
   }

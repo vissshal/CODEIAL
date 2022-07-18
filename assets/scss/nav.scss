@@ -1,4 +1,10 @@
 .nav-main {
+  a {
+    text-decoration: none;
+    color: initial;
+    font-family: calibri;
+  }
+
   display: flex;
   position: relative;
   // justify-content: center;
@@ -14,20 +20,14 @@
   }
   #logo-text {
     margin-left: 12px;
-    font-family: "Rubik Moonrocks", Calibri;
-    font-size: 30px;
+    a {
+      font-family: "Rubik Moonrocks", Calibri;
+      font-size: 30px;
+    }
   }
   #showUser {
     position: absolute;
     right: 5;
     padding-left: 4px;
-    a {
-      text-decoration: none;
-      color: black;
-    }
-    img {
-      height: 15px;
-      width: 15px;
-    }
   }
 }

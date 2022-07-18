@@ -1,3 +1,7 @@
+body a {
+  text-decoration: none;
+}
+
 body h2 {
   font-family: "Allerta", sans-serif;
 }
@@ -72,9 +76,22 @@ body #older-posts .user .user-name b {
 body #older-posts .user .user-post {
   font-family: calibri;
   font-weight: 400;
-  font-size: 18px;
-  margin-top: 8px;
-  margin-left: 30px;
+  font-size: 16px;
+  margin: 8px 30px 10px;
+}
+
+body #older-posts .user .delete-btn {
+  margin: 15px 40px;
+  padding: 5px 10px;
+}
+
+body #older-posts .user a {
+  font-weight: 550;
+  margin-left: 15px;
+}
+
+body #older-posts .user a:hover {
+  color: red;
 }
 
 .redirect-btn {
