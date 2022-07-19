@@ -29,11 +29,28 @@ module.exports.create = function (req, res) {
 };
 
 module.exports.delete = function (req, res) {
-  Comments.findByIdAndDelete(req.params.id, function (err, post) {
+  Comments.findById(req.params.id, function (err, comment) {
     if (err) {
       console.log(err);
     }
+    let postID = comment.post;
+    // new variable banana padega otherwise remove() hote hi comment accessible nahi rahega
+    comment.remove();
 
-    return redirect("/");
+    Post.findByIdAndUpdate(
+      postID,
+      { $pull: { comments: req.params.id } },
+      function (err, post) {
+        if (err) {
+          console.log(err);
+        }
+        // post.comments = post.comments.filter(
+        //   (commentID) => commentID != req.params.id
+        // );
+        // post.save();
+        // save() method is necessary in case we're updating something in DB (here: posts)
+        return res.redirect("/");
+      }
+    );
   });
 };

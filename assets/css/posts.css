@@ -1,0 +1,103 @@
+body a {
+  text-decoration: none;
+}
+
+body h2 {
+  font-family: "Allerta", sans-serif;
+}
+
+body button {
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 120px;
+}
+
+body button:hover {
+  background-color: #2185d0;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  transform: scale(1.2);
+}
+
+body .comments {
+  font-family: "Sriracha", cursive;
+  font-size: 12px;
+}
+
+body .comments .comments-comment {
+  margin-left: 20px;
+}
+
+body .profile-signup {
+  height: 30px;
+}
+
+body #new-post {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+body #new-post #post-btn {
+  box-sizing: border-box;
+  width: 100px;
+}
+
+body #new-post #post-btn:hover {
+  background-color: #2185d0;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  transform: scale(1.2);
+}
+
+body #redirect {
+  padding: 0px 10px;
+}
+
+body #older-posts {
+  margin-top: 4px;
+}
+
+body #older-posts .user {
+  padding: 8px 4px;
+  margin-top: 20px;
+}
+
+body #older-posts .user .user-name {
+  font-family: calibri;
+  font-size: 15px;
+}
+
+body #older-posts .user .user-name b {
+  font-size: 20px;
+}
+
+body #older-posts .user .user-post {
+  font-family: calibri;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 8px 30px 10px;
+}
+
+body #older-posts .user .delete-btn {
+  margin: 15px 40px;
+  padding: 5px 10px;
+}
+
+body #older-posts .user a {
+  font-weight: 550;
+  margin-left: 15px;
+}
+
+body #older-posts .user a:hover {
+  color: red;
+}
+
+.redirect-btn {
+  padding: 10px 15px;
+}
+
+#signin {
+  padding: 10px 15px;
+}
